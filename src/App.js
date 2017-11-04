@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Location from './pages/Location';
 
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
@@ -65,6 +66,12 @@ class App extends Component {
           <span className="nav-text">Contact</span>
           </Link>
         </Menu.Item>
+        <Menu.Item key="4">
+          <Link to="/location">
+          <Icon type="upload" />
+          <span className="nav-text">Location</span>
+          </Link>
+        </Menu.Item>
       </Menu>
     </Sider>
     <Layout style={{ marginLeft: 200 }}>
@@ -74,6 +81,7 @@ class App extends Component {
          <Route exact path="/" component={Home}/>
          <Route path="/about" component={About}/>
          <Route path="/contact" component={Contact}/>
+         <Route path="/Location" component={Location}/>
         </div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>

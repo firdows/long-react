@@ -34,3 +34,8 @@ We use Ant Design. view https://ant.design/
 ```
 $ yarn add antd 
 ```
+
+#### HTTP client for the browser
+```
+$ yarn add axios -S
+```
