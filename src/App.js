@@ -9,6 +9,8 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Button from 'antd/lib/button';
+
 
 class App extends Component {
   render() {
@@ -20,6 +22,8 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+          
+          <Button type="primary">Button</Button>
         </p>
         
         <ul>
