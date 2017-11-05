@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import PropType from 'prop-types';
 
 class LocationForm extends Component {
+  
+  static propTypes = {
+    handleSubmit: PropType.func.isRequired
+  }
   
   state = {
     PROVINCE_CODE:'',
@@ -16,12 +21,17 @@ class LocationForm extends Component {
   }
   
   handleSubmit = (e) =>{
-   e.preventDefault();
-   console.log(this.state);
-   const url = `https://yii2-react-firdows.c9users.io/location`;
-   axios.post(url,this.state).then(res => {
-      console.log(res);
-   });
+     e.preventDefault();
+     console.log(this.state);
+     const url = `https://yii2-react-firdows.c9users.io/location`;
+     
+     setTimeout(() =>{
+       this.props.handleSubmit();
+     },2000);
+     
+     axios.post(url,this.state).then(res => {
+        console.log(res);
+     });
   }
   
   render() {

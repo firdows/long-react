@@ -39,3 +39,8 @@ $ yarn add antd
 ```
 $ yarn add axios -S
 ```
+
+#### Prop Types
+```
+$ yarn add prop-types -S
+```
